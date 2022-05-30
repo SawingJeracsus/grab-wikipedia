@@ -7,6 +7,8 @@ const INITIAL_WORDS = "яблуко, картина, кубік рубік";
 const LANGUAGE: Language = "uk"
 const AMOUNT_OF_SENTENCES = 5
 
+console.log("Мова пошуку - "+ LANGUAGE);
+
 const loadWikiInformation = async (word: string, lang: Language = "uk") => {
     try {
         const response = await axios.get(new URL(`https://${lang}.wikipedia.org/wiki/${word}`).toString())
